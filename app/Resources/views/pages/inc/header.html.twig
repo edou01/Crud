@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+                <head>
+                    <meta charset="UTF-8" />
+                    <title>CRUD Symfony 3 Tuto</title>
+
+                    <link rel="stylesheet"  href="{{ absolute_url(asset('css/bootstrap.css')) }}" />
+                </head>
+    <body>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+
+                            <a class="navbar-brand" href="#">Symfony 3 CRUD TUTO </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-exmple-navbar-collapse-2" >
+
+
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    {% for success_message in app.session.flashbag.get('message') %}
+                        <div class="alert alart-sucess">{{ success_message }}</div>
+                    {% endfor %}
+                </div>
+
+    </body>
+</html>
